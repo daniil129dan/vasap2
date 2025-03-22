@@ -1,0 +1,14 @@
+.todo-list {
+    text-align: left;
+  }
+  
+  .todo-list ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .todo-list p {
+    font-size: 14px;
+    color: gray;
+  }
+  
