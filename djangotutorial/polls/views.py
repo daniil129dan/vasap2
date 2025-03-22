@@ -1,7 +1,9 @@
 from django.views.generic import TemplateView
 from django.http import HttpResponse
 from .nocodeb_api import get_users
-
+from rest_framework import viewsets
+from .models import Question, Choice, User
+from .serializers import QuestionSerializer, ChoiceSerializer, UserSerializer
 
 
 class UserListView(TemplateView):
@@ -21,6 +23,16 @@ class UserListView(TemplateView):
         return context
 
 
+class QuestionViewSet(viewsets.ModelViewSet):
+    queryset = Question.objects.all()
+    serializer_class = QuestionSerializer
 
+class ChoiceViewSet(viewsets.ModelViewSet):
+    queryset = Choice.objects.all()
+    serializer_class = ChoiceSerializer
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
 # Create your views here.
