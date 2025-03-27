@@ -3,3 +3,4 @@ nav:
   - Home: index.md
   - Models: models.md
   - Views: views.md
+  - Serializers: serializers.md
